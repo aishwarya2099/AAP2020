@@ -1,0 +1,148 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/5907e903af.js" crossorigin="anonymous"></script>
+<title>FIND YOUR TREND</title>
+
+        
+        <link rel="stylesheet" href="css1/responsive.css">
+        <link rel="stylesheet" href="css1/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css1/fontAwesome.css">
+        <link rel="stylesheet" href="css1/light-box.css">
+        <link rel="stylesheet" href="css1/owl-carousel.css">
+        <link rel="stylesheet" href="css1/templatemo-style.css">
+        <link rel="stylesheet" type="text/css" href="css/Collapsible.css">
+         <link rel="stylesheet" href="css1/main.css">
+         <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+
+        <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"> -->
+
+        <!-- <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script> -->
+
+</head>
+<style type="text/css">
+h5{
+    color: #192A56;
+}
+
+body {
+
+    background-color: #d4ebf2;
+    }
+
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #2475B0;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #2475B0;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #2475B0;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #2475B0;
+}
+
+.wrapper {
+     width: 100%;
+     height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+ .wrapper .file-upload {
+     height: 200px;
+     width: 200px;
+     border-radius: 100px;
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border: 4px solid #fff;
+     overflow: hidden;
+     background-image: linear-gradient(to bottom, #192A56 50%, #fff 50%);
+     background-size: 100% 200%;
+     transition: all 1s;
+     color: #fff;
+     font-size: 100px;
+}
+ .wrapper .file-upload input[type='file'] {
+     height: 200px;
+     width: 200px;
+     position: absolute;
+     top: 0;
+     left: 0;
+     opacity: 0;
+     cursor: pointer;
+}
+ .wrapper .file-upload:hover {
+     background-position: 0 -100%;
+     color: #192A56;
+}
+body  {
+  background-image: url("https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+  background-color: #cccccc;
+   background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+</style>
+<body>
+
+<!-- header section --> 
+
+
+<!-- contact section -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 conForm">
+        <h5>Find Your Trend</h5>
+        <br>
+    <h4>Upload Photo</h4>
+        <br>
+        <div id="message"></div>
+        
+      
+          <form action="upload.php" method="post" enctype="multipart/form-data">
+            <div class="wrapper">
+  <div class="file-upload">
+    <input type="file" class="input-file" name="fileToUpload" id="fileToUpload" required>
+    <i class="fa fa-arrow-up"></i>
+</div></div>
+    <div>
+        <br>
+    <span id="file"> No File Selected</span>
+    </div>
+    <center>
+    <input type="submit" class="submitBnt up" style="background-color: #192A56" value="Submit" name="submit">
+    </center>
+</form>
+
+      <!-- </div>
+    </div>
+  </div> -->
+</section>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#fileToUpload").hover().css("background-color: #fff")
+        $("#fileToUpload").on("change",function(e){
+            var fileName = e.target.files[0].name;
+            $("#file").text(fileName)
+            $("#file").show()
+        })
+    })
+</script>
+</body>
+</html>
